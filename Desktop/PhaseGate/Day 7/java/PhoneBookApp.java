@@ -11,7 +11,7 @@ WELCOME TO PHONE BOOK
 
 1-> Add contact
 
-2-> Remove contact;
+2-> Remove contact
 
 3-> Find contact by phone number
 
@@ -21,16 +21,20 @@ WELCOME TO PHONE BOOK
 
 6-> Edit contact
 
+7-> Back
+
 """;
 
 System.out.println(prompt);
 
-System.out.println("Enter Option");
+System.out.println("Enter Next Option");
 int userInput1 = scanner.nextInt();
+
+System.out.println();
 
 switch(userInput1) {
 
-	case 1: System.out.println("Add contact");
+	case 1: System.out.println("1-> Add contact");
 		break;
 
 	case 2: System.out.println("Remove contact");
@@ -50,5 +54,26 @@ switch(userInput1) {
 
 	}
 
-    }
-} 
+	System.out.println();
+
+	System.out.println("Enter Next Option");
+	int userInput2 = scanner.nextInt();
+
+	System.out.println();
+
+	switch(userInput2) {
+	
+	case 1: System.out.println("1-> Enter Phone Number");
+		break;
+
+	case 2: System.out.println("2-> Back");
+		break;
+	}
+
+	System.out.println();
+
+	
+
+
+}
+}
