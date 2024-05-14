@@ -1,9 +1,17 @@
 import java.util.*;
 
 public class PhoneBookApp {
+
+static ArrayList<String> contactName = new ArrayList<String>();	
+
 public static void main(String[] args) {
 
 Scanner scanner = new Scanner(System.in);
+
+
+
+	
+
 
 String prompt = """
 
@@ -89,7 +97,6 @@ switch(userInput1) {
 		break;
 	}
 
-
 	System.out.println();
 
 	System.out.println("Enter Next Option");
@@ -99,23 +106,42 @@ switch(userInput1) {
 
 	case 1: addContact();
 
-	case 2: back2();
-
+	case 2: backToMainMenu();
 	}
+
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	}
 	public static void addContact(){
 	Scanner scanner = new Scanner(System.in);
 
-	System.out.println("Enter First Name");
-	String firstName = scanner.nextLine();
-
-	System.out.println("Enter Last Name");
-	String lastName = scanner.nextLine();
+	System.out.println("Enter Contact Name");
+	String name = scanner.nextLine();
 
 	System.out.println("Enter Phone Number");
-	String number = scanner.nextLine();	
+	String number = scanner.nextLine();
+
+	contactName.add(name);	
 	}
 
 	public static void backToMainMenu(){
@@ -142,20 +168,6 @@ switch(userInput1) {
 	System.out.println(prompt);
 	}
 
-	public static void back(){
-	System.out.println("1-> Enter contact Details");
-
-	System.out.println("2-> Back To Main Menu");
-	
-	}
-
-	public static void back2() {
-
-	System.out.println("1-> Enter contact Details");
-	System.out.println("2-> Back");	
-	System.out.println("3-> Back To Main Menu");
-	}		
-
 	public static void optionContact(){
 
 	System.out.println("1-> Enter contact Details");
@@ -163,8 +175,6 @@ switch(userInput1) {
 	System.out.println("2-> Back To Main Menu");
 	}
 
-
-	
 
 }
 
