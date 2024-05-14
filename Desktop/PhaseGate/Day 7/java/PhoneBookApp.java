@@ -63,31 +63,17 @@ switch(userInput1) {
 	case 1: addContact();
 		break;
 
-	case 2: System.out.println("2-> Back To Previous Menu");
-		break;
-
-	case 3: System.out.println("3-> Back To Main Menu");
-		break;
-
-	}
-
-	System.out.println();	
-
-	System.out.println("1-> Back");
-	System.out.println();
-	System.out.println("2-> Back To Main Menu");
-	int userInput3 = scanner.nextInt();
-
-	System.out.println();
-
-	switch(userInput3) {
-
-	case 1: back();
-		break;
-
 	case 2: backToMainMenu();
 		break;
+
 	}
+
+	System.out.println();
+
+	System.out.println("No More Option");
+	System.out.println();
+	System.out.println("1-> Back");
+	System.out.println("2-> Back To Main Menu");	
 
 	System.out.println();
 
@@ -96,29 +82,26 @@ switch(userInput1) {
 
 	switch(userInput4) {
 
-	case 1: System.out.println("1-> Add contact");
+	case 1: optionContact();
 		break;
 
-	case 2: System.out.println("2-> Remove contact");
-		break;
-
-	case 3: System.out.println("3-> Find contact by phone number");
-		break;
-
-	case 4: System.out.println("4-> Find contact by first name");
-		break;
-
-	case 5: System.out.println("5-> Find contact by last name");
-		break;
-
-	case 6: System.out.println("6-> Edit contact");
+	case 2: backToMainMenu();
 		break;
 	}
 
+
 	System.out.println();
 
-	System.out.println("1-> Back To Previous Menu");
-	System.out.println("2-> Back To Main Menu");
+	System.out.println("Enter Next Option");
+	int userInput6 = scanner.nextInt();
+
+	switch(userInput6) {
+
+	case 1: addContact();
+
+	case 2: back2();
+
+	}
 	
 	
 	}
@@ -181,6 +164,7 @@ switch(userInput1) {
 	}
 
 
+	
 
 }
 
