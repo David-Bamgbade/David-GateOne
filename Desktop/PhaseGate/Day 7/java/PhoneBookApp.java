@@ -32,7 +32,7 @@ System.out.println();
 
 switch(userInput1) {
 
-	case 1: System.out.println("1-> Add contact");
+	case 1: optionContact();
 		break;
 
 	case 2: System.out.println("2-> Remove contact");
@@ -60,30 +60,66 @@ switch(userInput1) {
 
 	switch(userInput2) {
 
-	case 1: System.out.println("1-> Enter contact Details");
+	case 1: addContact();
+		break;
 
-	case 2: System.out.println("2-> Back");
+	case 2: System.out.println("2-> Back To Previous Menu");
+		break;
+
+	case 3: System.out.println("3-> Back To Main Menu");
+		break;
 
 	}
 
 	System.out.println();	
 
-	System.out.println("Enter Next Option");
+	System.out.println("1-> Back");
+	System.out.println();
+	System.out.println("2-> Back To Main Menu");
 	int userInput3 = scanner.nextInt();
 
 	System.out.println();
 
 	switch(userInput3) {
-	
-	case 1: addContact();
+
+	case 1: back();
 		break;
 
-	case 2: back();
+	case 2: backToMainMenu();
 		break;
 	}
 
 	System.out.println();
 
+	System.out.println("Enter Next Option");
+	int userInput4 = scanner.nextInt();
+
+	switch(userInput4) {
+
+	case 1: System.out.println("1-> Add contact");
+		break;
+
+	case 2: System.out.println("2-> Remove contact");
+		break;
+
+	case 3: System.out.println("3-> Find contact by phone number");
+		break;
+
+	case 4: System.out.println("4-> Find contact by first name");
+		break;
+
+	case 5: System.out.println("5-> Find contact by last name");
+		break;
+
+	case 6: System.out.println("6-> Edit contact");
+		break;
+	}
+
+	System.out.println();
+
+	System.out.println("1-> Back To Previous Menu");
+	System.out.println("2-> Back To Main Menu");
+	
 	
 	}
 	public static void addContact(){
@@ -99,7 +135,7 @@ switch(userInput1) {
 	String number = scanner.nextLine();	
 	}
 
-	public static void back(){
+	public static void backToMainMenu(){
 	String prompt = """
 
 	WELCOME TO PHONE BOOK
@@ -123,13 +159,30 @@ switch(userInput1) {
 	System.out.println(prompt);
 	}
 
+	public static void back(){
+	System.out.println("1-> Enter contact Details");
 
-
-	}
-       
+	System.out.println("2-> Back To Main Menu");
 	
+	}
+
+	public static void back2() {
+
+	System.out.println("1-> Enter contact Details");
+	System.out.println("2-> Back");	
+	System.out.println("3-> Back To Main Menu");
+	}		
+
+	public static void optionContact(){
+
+	System.out.println("1-> Enter contact Details");
+
+	System.out.println("2-> Back To Main Menu");
+	}
 
 
+
+}
 
  	
 
