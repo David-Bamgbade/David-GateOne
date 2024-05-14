@@ -21,8 +21,6 @@ WELCOME TO PHONE BOOK
 
 6-> Edit contact
 
-7-> Back
-
 """;
 
 System.out.println(prompt);
@@ -37,21 +35,20 @@ switch(userInput1) {
 	case 1: System.out.println("1-> Add contact");
 		break;
 
-	case 2: System.out.println("Remove contact");
+	case 2: System.out.println("2-> Remove contact");
 		break;
 
-	case 3: System.out.println("Find contact by phone number");
+	case 3: System.out.println("3-> Find contact by phone number");
 		break;
 
-	case 4: System.out.println("Find contact by first name");
+	case 4: System.out.println("4-> Find contact by first name");
 		break;
 
-	case 5: System.out.println("Find contact by last name");
+	case 5: System.out.println("5-> Find contact by last name");
 		break;
 
-	case 6: System.out.println("Edit contact");
+	case 6: System.out.println("6-> Edit contact");
 		break;
-
 	}
 
 	System.out.println();
@@ -62,18 +59,86 @@ switch(userInput1) {
 	System.out.println();
 
 	switch(userInput2) {
-	
-	case 1: System.out.println("1-> Enter Phone Number");
-		break;
+
+	case 1: System.out.println("1-> Enter contact Details");
 
 	case 2: System.out.println("2-> Back");
+
+	}
+
+	System.out.println();	
+
+	System.out.println("Enter Next Option");
+	int userInput3 = scanner.nextInt();
+
+	System.out.println();
+
+	switch(userInput3) {
+	
+	case 1: addContact();
+		break;
+
+	case 2: back();
 		break;
 	}
 
 	System.out.println();
 
 	
+	}
+	public static void addContact(){
+	Scanner scanner = new Scanner(System.in);
+
+	System.out.println("Enter First Name");
+	String firstName = scanner.nextLine();
+
+	System.out.println("Enter Last Name");
+	String lastName = scanner.nextLine();
+
+	System.out.println("Enter Phone Number");
+	String number = scanner.nextLine();	
+	}
+
+	public static void back(){
+	String prompt = """
+
+	WELCOME TO PHONE BOOK
+
+	1-> Add contact
+
+	2-> Remove contact
+
+	3-> Find contact by phone number
+
+	4-> find contact by first name
+
+	5-> Find contact by last name
+
+	6-> Edit contact
+
+	7-> Back
+
+	""";
+
+	System.out.println(prompt);
+	}
 
 
-}
-}
+
+	}
+       
+	
+
+
+
+ 	
+
+
+
+
+
+
+
+
+
+
