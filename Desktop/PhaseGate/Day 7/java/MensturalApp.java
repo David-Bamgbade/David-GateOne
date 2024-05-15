@@ -26,16 +26,15 @@ public static void main(String[] args) {
 
 	LocalDate endPeriod = nextPeriod.plusDays(periodLast);
 
-	LocalDate ovulation = nextPeriod.plusDays(9);
+	LocalDate ovulation = nextPeriod.minusDays(14);
 
 	LocalDate ovulationEnd = ovulation.plusDays(5);
 	
-	System.out.println("Your Next Period Starts From " + nextPeriod);
-	System.out.println("And It Ends At " + endPeriod);
+	System.out.println("Your Next Period Starts From " + nextPeriod + " and It ends At " + endPeriod);
 	System.out.println();
 
-	System.out.println("Your Ovulation(fertiledays) Starts From " + ovulation);
-	System.out.println("Your Ovulation(fertiledays) Ends At " + ovulationEnd);
+	System.out.println("Your Ovulation(fertiledays) Starts From " + ovulation + " and your Ovulation(fertiledays) ends At " + ovulationEnd);
+
 
 	
 
