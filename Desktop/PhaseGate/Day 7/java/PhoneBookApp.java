@@ -3,14 +3,14 @@ import java.util.*;
 public class PhoneBookApp {
 
 static ArrayList<String> contactName = new ArrayList<String>();	
+static ArrayList<String> surname = new ArrayList<String>();
+static ArrayList<String> phoneNumber = new ArrayList<String>();
 
 public static void main(String[] args) {
 
 Scanner scanner = new Scanner(System.in);
 
 
-
-	
 
 
 String prompt = """
@@ -43,7 +43,7 @@ switch(userInput1) {
 	case 1: optionContact();
 		break;
 
-	case 2: System.out.println("2-> Remove contact");
+	case 2: delete();
 		break;
 
 	case 3: System.out.println("3-> Find contact by phone number");
@@ -119,31 +119,36 @@ switch(userInput1) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 	
 	}
 	public static void addContact(){
 	Scanner scanner = new Scanner(System.in);
 
-	System.out.println("Enter Contact Name");
-	String name = scanner.nextLine();
+	System.out.println("Enter First Name");
+	String firstName = scanner.nextLine();
+
+	System.out.println("Enter second Name");
+	String secondName = scanner.nextLine();	
 
 	System.out.println("Enter Phone Number");
 	String number = scanner.nextLine();
 
-	contactName.add(name);	
+	contactName.add(firstName);
+	surname.add(secondName);
+	phoneNumber.add(number);
+ 		
 	}
 
+	public static void delete(){
+		contactName.remove(0);
+		surname.remove(0);
+		phoneNumber.remove(0);
+
+	System.out.println(">>>>>>>>>>Contact Deleted Succesfully<<<<<<<<<<"); 
+	}
+
+	
+	
 	public static void backToMainMenu(){
 	String prompt = """
 
