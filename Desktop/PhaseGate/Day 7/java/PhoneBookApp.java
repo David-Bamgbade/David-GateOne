@@ -8,39 +8,39 @@ static ArrayList<String> PhoneNumber = new ArrayList<String>();
 
 public static void main(String[] args) {
 
-Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
 
 
 
-String prompt = """
+	String prompt = """
 
-WELCOME TO PHONE BOOK
+	WELCOME TO PHONE BOOK
 
-1-> Add contact
+	1-> Add contact
 
-2-> Remove contact
+	2-> Remove contact
 
-3-> Find contact by phone number
+	3-> Find contact by phone number
 
-4-> find contact by first name
+	4-> find contact by first name
 
-5-> Find contact by last name
+	5-> Find contact by last name
 
-6-> Edit contact
+	6-> Edit contact
 
-7-> Back
+	7-> Back
 
-""";
+	""";
 
-System.out.println(prompt);
+	System.out.println(prompt);
 
-System.out.println("Enter Next Option");
-int userInput1 = scanner.nextInt();
+	System.out.println("Enter Next Option");
+	int userInput1 = scanner.nextInt();
 
-System.out.println();
+	System.out.println();
 
-switch(userInput1) {
+	switch(userInput1) {
 
 	case 1: addContact();
 		break;
@@ -51,12 +51,11 @@ switch(userInput1) {
 	case 3: findContactByPhoneNumber();
 		break;
 
-	case 4:
+	case 4: 
 
-	case 5: 
+	case 5:
 
-	case 6:  backToMainMenu();
-		break;
+	case 6:  mainMenu(); 
 
 	}
 
@@ -96,10 +95,64 @@ switch(userInput1) {
 	}		
 		else {
 	System.out.println("<<<<<<<<<<Contact Added Sucessfully>>>>>>>>>>");
+	 mainMenu();
 	}
 	}
 	
+	public static void mainMenu(){
+
+	String prompt = """
+
+	WELCOME TO PHONE BOOK
+
+	1-> Add contact
+
+	2-> Remove contact
+
+	3-> Find contact by phone number
+
+	4-> find contact by first name
+
+	5-> Find contact by last name
+
+	6-> Edit contact
+
+	7-> Back
+
+	""";
+
+	System.out.println(prompt);
 	
+	Scanner scanner = new Scanner(System.in);
+
+	System.out.println("Enter Next Option");
+	int userInput1 = scanner.nextInt();
+
+	System.out.println();
+
+	switch(userInput1) {
+
+	case 1: addContact();
+		break;
+
+	case 2: removeContact();
+		break;
+
+	case 3: findContactByPhoneNumber();
+		break;
+
+	case 4: findNumberByFirstName();
+		break;
+
+	case 5:
+
+	case 6:  mainMenu();
+		 break;
+	}
+      }
+
+
+
 	public static void removeContact(){
 
 	Scanner scanner = new Scanner(System.in);
@@ -143,10 +196,9 @@ switch(userInput1) {
      	System.out.println(PhoneNumber);
 	}
 	}
-	System.out.printf("%s%s%s", FirstName, LastName, PhoneNumber);
 	System.out.println(">>>>>>>>>>Deleted Successfully<<<<<<<<<<");
-	
-}
+	mainMenu();	
+      }
 	
 	public static void findContactByPhoneNumber(){
 	Scanner scanner = new Scanner(System.in);
@@ -165,13 +217,33 @@ switch(userInput1) {
 	}
 	else {
 		System.out.println("Number Does Not Exist");
+	}		
 	}
-
+   		 mainMenu();
 	}
-    }
-
 	
-		
+	public static void findNumberByFirstName(){
+
+	Scanner scanner = new Scanner(System.in);
+
+	String numberByFirstName = "";
+	
+	System.out.println("Enter Phone Number To Find Contact");
+	String firstNameNumber = scanner.nextLine();
+
+	for(int count = 0; count < FirstName.size(); count++)  {
+  	numberByFirstName = FirstName.get(count);
+
+	if(firstNameNumber.equals(numberByFirstName)){
+	FirstName.indexOf(numberByFirstName);	
+	System.out.println("This is the contact" + firstNameNumber);
+	}
+	else {
+		System.out.println("Number Does Not Exist");
+	}		
+	}
+   		 mainMenu();
+	}
 			
 
 
@@ -186,36 +258,6 @@ switch(userInput1) {
 
 
 
-	public static void backToMainMenu(){
-	String prompt = """
-
-	WELCOME TO PHONE BOOK
-
-	1-> Add contact
-
-	2-> Remove contact
-
-	3-> Find contact by phone number
-
-	4-> find contact by first name
-
-	5-> Find contact by last name
-
-	6-> Edit contact
-
-	7-> Back
-
-	""";
-
-	System.out.println(prompt);
-	}
-
-	public static void optionContact(){
-
-	System.out.println("1-> Enter contact Details");
-
-	System.out.println("2-> Back To Main Menu");
-	}
 
 
 }

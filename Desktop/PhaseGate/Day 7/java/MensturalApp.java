@@ -26,7 +26,7 @@ public static void main(String[] args) {
 
 	LocalDate endPeriod = nextPeriod.plusDays(periodLast);
 
-	LocalDate ovulation = nextPeriod.minusDays(14);
+	LocalDate ovulation = endPeriod.addDays(14);
 
 	LocalDate ovulationEnd = ovulation.plusDays(5);
 	
