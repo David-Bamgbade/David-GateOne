@@ -12,7 +12,7 @@ Next_Period = datetime + timedelta(days=Menstural_Cycle)
 
 End_Period = Next_Period + timedelta(days=Period_Last)
 
-Ovulation = Next_Period + timedelta(days=9)
+Ovulation = Next_Period + timedelta(days=14)
 
 End_Ovulation = Ovulation + timedelta(days=5)
 

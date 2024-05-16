@@ -10,7 +10,7 @@ let cycle = parseInt(prompt("How Long Is your Menstural Cycle "));
 
 let nextPeriod = mensturationDate.addDays(cycle);
 
-Console.log(nextPeriod)
+
 
 
 

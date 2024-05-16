@@ -10,9 +10,6 @@ public static void main(String[] args) {
 
 	Scanner scanner = new Scanner(System.in);
 
-
-
-
 	String prompt = """
 
 	WELCOME TO PHONE BOOK
@@ -144,10 +141,13 @@ public static void main(String[] args) {
 	case 4: findNumberByFirstName();
 		break;
 
-	case 5:
+	case 5: findNumberByLastName();
+		break;
 
-	case 6:  mainMenu();
-		 break;
+	case 6: editContact();
+
+	case 7: mainMenu();
+		break;
 	}
       }
 
@@ -210,15 +210,18 @@ public static void main(String[] args) {
 
 	for(int count = 0; count < PhoneNumber.size(); count++)  {
   	numberToFind = PhoneNumber.get(count);
+	}
 
 	if(contactToFind.equals(numberToFind)){
-	PhoneNumber.indexOf(numberToFind);	
-	System.out.println("This is the contact" + numberToFind);
+
+	PhoneNumber.indexOf(numberToFind);
+		
+	System.out.println("This is the contact " + numberToFind);
 	}
 	else {
 		System.out.println("Number Does Not Exist");
 	}		
-	}
+	
    		 mainMenu();
 	}
 	
@@ -233,23 +236,69 @@ public static void main(String[] args) {
 
 	for(int count = 0; count < FirstName.size(); count++)  {
   	numberByFirstName = FirstName.get(count);
+	}
 
 	if(firstNameNumber.equals(numberByFirstName)){
 	FirstName.indexOf(numberByFirstName);	
-	System.out.println("This is the contact" + firstNameNumber);
+	System.out.println("This is the contact " + firstNameNumber);
 	}
 	else {
 		System.out.println("Number Does Not Exist");
 	}		
-	}
+	
    		 mainMenu();
 	}
 			
 
+	public static void findNumberByLastName(){
 
+	Scanner scanner = new Scanner(System.in);
+	
+	String numberByLastName = "";
+	
+	System.out.println("Enter Phone Number To Find Contact");
+	String LastNameNumber = scanner.nextLine();
 
+	for(int count = 0; count < LastName.size(); count++)  {
+  	numberByLastName = FirstName.get(count);
+	}
 
+	if(LastNameNumber.equals(numberByLastName)){
+	FirstName.indexOf(numberByLastName);	
+	System.out.println("This is the contact " + LastNameNumber);
+	}
+	else {
+		System.out.println("Number Does Not Exist");
+	}		
+	
+   		 mainMenu();
+	}
 
+	public static void editContact(){
+
+	Scanner scanner = new Scanner(System.in);
+	
+	String editByLastName = "";
+	
+	System.out.println("Enter Last Name Of Contact You Want To Edit ");
+	String editLastName = scanner.nextLine();
+
+	for(int count = 0; count < LastName.size(); count++)  {
+  	editByLastName = FirstName.get(count);
+	}
+
+	if(editLastName.equals(editByLastName)){
+	FirstName.indexOf(editByLastName);	
+	System.out.println("Edit Details");
+	String edit = scanner.nextLine();
+	}
+	else {
+		System.out.println("Detail Does Not Exist");
+	}		
+	
+   		 mainMenu();
+	}
+	
 
 
 
